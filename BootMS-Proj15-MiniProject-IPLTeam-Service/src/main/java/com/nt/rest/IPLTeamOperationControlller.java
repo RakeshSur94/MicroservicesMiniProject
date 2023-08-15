@@ -16,7 +16,7 @@ import com.nt.entity.IPLTeam;
 import com.nt.service.IPLTeamService;
 
 @RestController
-@RequestMapping("IplTeam-Api")
+@RequestMapping("/IplTeam-Api")
 public class IPLTeamOperationControlller {
 	@Autowired
 	private IPLTeamService iplService;

@@ -18,7 +18,7 @@ import com.nt.entity.IPLTeam;
 import com.nt.service.IIPLPlayerService;
 
 @RestController
-@RequestMapping("Player-Api")
+@RequestMapping("/Player-Api")
 public class IIPLPlayerOperationController {
 	@Autowired
 	private IIPLPlayerService iPlayerService;
