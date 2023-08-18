@@ -39,8 +39,8 @@ public class IPLPlayer implements Serializable{
 	@NonNull
 	@Column(length = 20)
 	private String role;
-	@ManyToOne(targetEntity = IPLTeam.class,cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-	@JoinColumn(name = "t_id",referencedColumnName = "team_id")
+	@ManyToOne(targetEntity = IPLTeam.class,cascade = CascadeType.MERGE,fetch = FetchType.LAZY)
+	@JoinColumn(name = "t_id",referencedColumnName = "teamId")
 	private IPLTeam team; 
 	
 	public IPLPlayer() {
