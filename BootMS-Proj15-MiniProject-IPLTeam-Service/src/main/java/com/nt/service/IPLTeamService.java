@@ -7,6 +7,6 @@ import com.nt.entity.IPLTeam;
 public interface IPLTeamService {
 	public String registerIPLTeam(IPLTeam team) ;
 	public List<IPLTeam> showAllTeam();
-	public IPLTeam findIPLTeamById(int id);
+	public IPLTeam findIPLTeamById(int teamId);
 
 }

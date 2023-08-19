@@ -29,14 +29,10 @@ public class IPLPlayerServiceImpl implements IIPLPlayerService {
 	}
 
 	@Override
-	public IPLPlayer getPlayerById(int id) throws Exception {
-		Optional<IPLPlayer>player=iPlayerRepo.findById(id);
-		if(player.isPresent()) {
-			log.info("Player is Present");
-			player.get();
-		}
-		log.error("Problem in finding Player info");
-		 throw new IllegalArgumentException("Player is not found");
+	public IPLPlayer fetchPlayerById(int pid) throws Exception {
+		log.info("Player finding method started");
+	return iPlayerRepo.findById(pid).orElseThrow(() -> new IllegalArgumentException("Player Not found"));
+		
 	}
 
 }

@@ -31,9 +31,9 @@ public class IPLTeamOperationControlller {
 		List<IPLTeam> list=iplService.showAllTeam();
 		return new ResponseEntity<List<IPLTeam>>(list, HttpStatus.OK);
 	}
-	@GetMapping("/find/{id}")
-	public ResponseEntity<?> findIPLTeamById(@PathVariable int id){
-		IPLTeam findById=iplService.findIPLTeamById(id);
+	@GetMapping("/find/{teamId}")
+	public ResponseEntity<?> findIPLTeamById(@PathVariable int teamId){
+		IPLTeam findById=iplService.findIPLTeamById(teamId);
 		return new ResponseEntity<IPLTeam>(findById, HttpStatus.OK);
 	}
 

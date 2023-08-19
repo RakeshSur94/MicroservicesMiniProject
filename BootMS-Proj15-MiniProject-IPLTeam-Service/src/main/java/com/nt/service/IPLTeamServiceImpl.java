@@ -27,9 +27,9 @@ public class IPLTeamServiceImpl implements IPLTeamService {
 	}
 
 	@Override
-	public IPLTeam findIPLTeamById(int id)  {
+	public IPLTeam findIPLTeamById(int teamId)  {
 		log.error("Find IPLTeam by id method started:: Find Team by ID Process is started");		
-		return iRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Team not Found"));
+		return iRepository.findById(teamId).orElseThrow(() -> new IllegalArgumentException("Team not Found"));
 	}
 
 }

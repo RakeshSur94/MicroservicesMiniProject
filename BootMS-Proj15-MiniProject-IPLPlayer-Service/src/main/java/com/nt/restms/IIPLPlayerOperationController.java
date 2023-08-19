@@ -52,11 +52,11 @@ public class IIPLPlayerOperationController {
 			return new ResponseEntity<String>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
-	@GetMapping("/findby/{id}")
-	public ResponseEntity<?> findIPLPlayerById(@PathVariable int id){
+	@GetMapping("/findby/{pid}")
+	public ResponseEntity<?> findIPLPlayerById(@PathVariable int pid){
 		try {
 			//use service to get all player
-			IPLPlayer player=iPlayerService.getPlayerById(id);
+			IPLPlayer player=iPlayerService.fetchPlayerById(pid);
 			return new ResponseEntity<IPLPlayer>(player, HttpStatus.OK);
 		}
 		catch (Exception e) {
